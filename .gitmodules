@@ -1,0 +1,9 @@
+[submodule "pytorch"]
+	path = pytorch
+	url = https://github.com/pytorch/pytorch
+[submodule "sort"]
+	path = sort
+	url = https://github.com/abewley/sort
+[submodule "yolov5"]
+	path = yolov5
+	url = https://github.com/ultralytics/yolov5
