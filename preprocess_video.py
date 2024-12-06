@@ -3,7 +3,7 @@ import os
 
 def preprocess():
     # Set up output folder
-    output_folder = "testing_data"
+    output_folder = "raw_frames/tufts_v_brandeis"
     os.makedirs(output_folder, exist_ok=True)
 
     # Load the video
@@ -22,9 +22,10 @@ def preprocess():
             break
         
         # Save every nth frame for testing (e.g., every 30th frame)
-        if frame_count % 30 == 0:
+        if frame_count % 1 == 0:
             frame_filename = os.path.join(output_folder,
                                           f"{vid_name}_frame_{frame_count}.jpg")
+            frame = cv2.resize(frame, (640, 640), interpolation=cv2.INTER_AREA)
             cv2.imwrite(frame_filename, frame)
             print(f"Saved {frame_filename}")
         

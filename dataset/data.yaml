@@ -1,0 +1,5 @@
+names:
+- Basketball
+nc: 1
+train: /Users/Michael_Zhou/Desktop/Nerdy Code Stuff/CV Projs/basketball_tracker/dataset/train/images
+val: /Users/Michael_Zhou/Desktop/Nerdy Code Stuff/CV Projs/basketball_tracker/dataset/valid/images
