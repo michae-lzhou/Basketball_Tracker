@@ -1,5 +1,6 @@
 import cv2
 import os
+import torch
 
 def preprocess():
     # Set up output folder
@@ -35,4 +36,6 @@ def preprocess():
     print("Preprocessed frames saved!")
 
 if __name__ == "__main__":
+ 
+    print(torch.cuda.is_available())
     preprocess()

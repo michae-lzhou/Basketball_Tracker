@@ -1,4 +1,6 @@
 from autodistill.detection import CaptionOntology
+import torch
+print(f'CUDA {torch.cuda.is_available()}')
 
 ontology = CaptionOntology({
     "basketball orange ball": "Basketball",
@@ -17,3 +19,5 @@ base_model = GroundingDINO(ontology=ontology, box_threshold=BOX_THRESHOLD,
 
 dataset = base_model.label(input_folder=IMG_DIR_PATH, extension=".jpg",
                            output_folder=DATA_DIR_PATH)
+
+
