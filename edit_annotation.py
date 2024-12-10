@@ -36,7 +36,7 @@ def get_annotations(label_file):
 
     return annotations
 
-def process_random_images(image_folder, label_folder, num_images=10):
+def process_random_images(image_folder, label_folder, num_images=100):
     """Process 10 random images with their labels."""
     global drawing, ix, iy, ex, ey, drawn_box
     image_files = [f for f in os.listdir(image_folder) if os.path.isfile(os.path.join(image_folder, f))]
