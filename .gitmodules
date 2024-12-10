@@ -7,3 +7,6 @@
 [submodule "yolov5"]
 	path = yolov5
 	url = https://github.com/michae-lzhou/yolov5.git
+[submodule "OpenCV_Camera_Calibration_Undistort_Video"]
+	path = OpenCV_Camera_Calibration_Undistort_Video
+	url = https://github.com/jeeho-ahn/OpenCV_Camera_Calibration_Undistort_Video.git
