@@ -4,7 +4,7 @@ import torch
 
 def preprocess():
     # Set up output folder
-    output_folder = "raw_frames/tufts_v_brandeis"
+    output_folder = "_raw_frames/tufts_v_brandeis"
     os.makedirs(output_folder, exist_ok=True)
 
     # Load the video
