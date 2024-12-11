@@ -1,5 +1,0 @@
-names:
-- Basketball
-nc: 1
-train: C:\Users\benla\Desktop\Basketball_Tracker\dataset/train/images
-val: C:\Users\benla\Desktop\Basketball_Tracker\dataset/valid/images
