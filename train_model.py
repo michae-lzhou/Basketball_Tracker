@@ -11,11 +11,11 @@ data_yaml_path = os.path.join(script_dir, "data.yaml")
 # Train the model with explicit dataset path
 results = model.train(
     data=data_yaml_path,
-    epochs=25,
+    epochs=300,
     project="dataset/checkpoints",
     name="small-Model",
-    batch=16,
-    device="cpu",
+    batch=32,
+    device="0",
     patience=40,
     imgsz=640,
     verbose=True,
