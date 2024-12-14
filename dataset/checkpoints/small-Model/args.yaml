@@ -1,11 +1,11 @@
 task: detect
 mode: train
 model: yolov5s.yaml
-data: data.yaml
-epochs: 300
+data: /Users/Michael_Zhou/Desktop/Nerdy Code Stuff/CV Projs/basketball_tracker/data.yaml
+epochs: 25
 time: null
 patience: 40
-batch: 32
+batch: 16
 imgsz: 640
 save: true
 save_period: -1
