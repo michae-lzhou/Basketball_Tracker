@@ -5,8 +5,7 @@ from tqdm import tqdm  # Import tqdm for the progress bar
 # Input parameters
 input_video_path = "_videos/basketball_game.mp4"  # Path to the saved MP4 file
 custom_model_path = "dataset/checkpoints/small-Model2/weights/best.pt"
-pre_trained_model_path = "yolov5s.pt"
-output_video_path = "output_video.mp4"  # Path to save the processed video
+pre_trained_model_path = "yolov5u.pt"
 output_txt_path = "average_coordinates.txt"  # Path to save the average coordinates
 
 # Load YOLO model and set confidence threshold
@@ -29,11 +28,11 @@ fps = int(cap.get(cv2.CAP_PROP_FPS))  # Frames per second
 total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))  # Total number of frames
 
 # Initialize VideoWriter to save output video
-fourcc = cv2.VideoWriter_fourcc(*'mp4v')
-out = cv2.VideoWriter(output_video_path, fourcc, fps, (frame_width, frame_height))
+# fourcc = cv2.VideoWriter_fourcc(*'mp4v')
+# out = cv2.VideoWriter(output_video_path, fourcc, fps, (frame_width, frame_height))
 
 # Initialize tqdm progress bar
-progress_bar = tqdm(total=total_frames, desc="Processing Video", unit="frame")
+# progress_bar = tqdm(total=total_frames, desc="Processing Video", unit="frame")
 
 frame_skip = 1
 frame_count = 0
@@ -87,23 +86,22 @@ with open(output_txt_path, "w") as file:
                 avg_x = total_x / weight_sum
                 avg_y = total_y / weight_sum
                 # Print average coordinates for the current frame
-                print(f"Frame {frame_count}: Avg Coordinates - X: {avg_x}, Y: {avg_y}")
+                # print(f"Frame {frame_count}: Avg Coordinates - X: {avg_x}, Y: {avg_y}")
                 # Save the average coordinates to the text file
                 file.write(f"{frame_count}, {avg_x}, {avg_y}\n")
             else:
                 # If no detections, write default values
-                print(f"Frame {frame_count}: No detections.")
+                # print(f"Frame {frame_count}: No detections.")
                 file.write(f"{frame_count}, No detections, No detections\n")
 
             # Update the progress bar
-            progress_bar.update(1)
+            # progress_bar.update(1)
 
 # Release resources and close progress bar
 cap.release()
-out.release()
-progress_bar.close()
+# out.release()
+# progress_bar.close()
 cv2.destroyAllWindows()
 
-print(f"Processed video saved to: {output_video_path}")
 print(f"Average coordinates saved to: {output_txt_path}")
 
