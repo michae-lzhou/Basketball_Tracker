@@ -5,7 +5,7 @@ from tqdm import tqdm  # Import tqdm for the progress bar
 # Input parameters
 input_video_path = "_videos/basketball_game.mp4"  # Path to the saved MP4 file
 custom_model_path = "dataset/checkpoints/small-Model2/weights/best.pt"
-pre_trained_model_path = "yolov5u.pt"
+pre_trained_model_path = "yolov5s.pt"
 output_txt_path = "average_coordinates.txt"  # Path to save the average coordinates
 
 # Load YOLO model and set confidence threshold
